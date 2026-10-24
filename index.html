@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dapur Lezat - Cita Rasa Istimewa</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #fff8ef;
+            color: #33251d;
+        }
+
+        header {
+            background: #a83218;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            font-size: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .hero {
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 35px;
+            padding: 60px 8%;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 270px;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(36px, 5vw, 55px);
+            color: #a83218;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .hero img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 25px;
+            object-fit: cover;
+            box-shadow: 0 10px 30px #0002;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #e66b24;
+            color: white;
+            padding: 14px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #a83218;
+        }
+
+        .menu {
+            text-align: center;
+            padding: 55px 8%;
+            background: #fff0df;
+        }
+
+        .menu h2 {
+            color: #a83218;
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .menu-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px #0001;
+        }
+
+        .card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .card h3 {
+            margin: 15px 0 8px;
+        }
+
+        .price {
+            color: #d64b20;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 12px 0;
+        }
+
+        .card button {
+            border: none;
+            background: #a83218;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .promo {
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .promo h2 {
+            color: #a83218;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: #33251d;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            .hero {
+                padding: 40px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>🍳 Dapur Lezat</h2>
+        <nav>
+            <a href="#beranda">Beranda</a>
+            <a href="#menu">Menu</a>
+            <a href="#promo">Promo</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="beranda">
+        <div class="hero-text">
+            <h1>Masakan Lezat, Bikin Nagih!</h1>
+            <p>
+                Nikmati kelezatan masakan dengan bahan pilihan,
+                bumbu meresap, aroma menggoda, dan rasa istimewa.
+                Dibuat dengan sepenuh hati untuk menemani harimu!
+            </p>
+            <a href="#menu" class="btn">🍽️ Lihat Menu</a>
+        </div>
+
+        <img
+            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=85"
+            alt="Hidangan makanan lezat">
+    </section>
+
+    <section class="menu" id="menu">
+        <h2>Menu Favorit Pelanggan</h2>
+        <p>Lezat, menggugah selera, dan cocok untuk setiap suasana.</p>
+
+        <div class="menu-list">
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=700&q=80"
+                    alt="Nasi goreng">
+                <h3>🍚 Nasi Goreng Spesial</h3>
+                <p>Nasi goreng dengan bumbu khas dan topping melimpah.</p>
+                <div class="price">Rp15.000</div>
+                <button onclick="pesan('Nasi Goreng Spesial')">
+                    Pesan Sekarang
+                </button>
+            </div>
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=700&q=80"
+                    alt="Mi lezat">
+                <h3>🍜 Mi Spesial</h3>
+                <p>Mi gurih dengan racikan bumbu yang bikin ketagihan.</p>
+                <div class="price">Rp12.000</div>
+                <button onclick="pesan('Mi Spesial')">
+                    Pesan Sekarang
+                </button>
+            </div>
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=80"
+                    alt="Pizza lezat">
+                <h3>🍕 Pizza Spesial</h3>
+                <p>Perpaduan topping lezat dan keju yang menggoda.</p>
+                <div class="price">Rp25.000</div>
+                <button onclick="pesan('Pizza Spesial')">
+                    Pesan Sekarang
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="promo" id="promo">
+        <h2>❤️ Dibuat dengan Cinta, Disajikan dengan Rasa!</h2>
+        <p>Yuk, pilih menu favoritmu dan nikmati kelezatannya hari ini.</p>
+        <br>
+        <a href="#menu" class="btn">Lihat Semua Menu</a>
+    </section>
+
+    <footer>
+        <p>© 2026 Dapur Lezat | Rasa Istimewa, Harga Bersahabat ❤️</p>
+    </footer>
+
+    <script>
+        function pesan(namaMenu) {
+            alert(
+                "Terima kasih! Anda memilih " + namaMenu +
+                ". Silakan hubungi penjual untuk menyelesaikan pesanan."
+            );
+        }
+    </script>
+
+</body>
+</html>
